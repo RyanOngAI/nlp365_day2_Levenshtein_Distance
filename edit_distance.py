@@ -1,3 +1,4 @@
+import sys
 # A Dynamic Programming based Python program for edit 
 # distance problem 
 def editDistDP(str1, str2):
@@ -42,9 +43,11 @@ def prettyPrint2dArray(array2d):
 
 
 if __name__ == "__main__":
-    # Driver program 
-    str1 = "Hi"
-    str2 = "Ha"
+
+    str1 = sys.argv[1]
+    str2 = sys.argv[2]
+
+    print("Calculating the Levenshtein Distance between " + str1 + " and " + str2)
 
     dp_table, edit_distance = editDistDP(str1, str2)
     
